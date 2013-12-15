@@ -1,5 +1,6 @@
 #
 # Copyright (c) 2011, Intel Corporation
+# Modified by :Puck Meerburg
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,7 +31,7 @@
 LANG="C"
 
 
-EXAMPLES=example.efi gfx_example.efi disk_example.efi
+EXAMPLES=example.efi gfx_example.efi disk_example.efi mouse_example.efi
 COMMON = glue/$(ARCH)/relocation_func.o glue/$(ARCH)/start_func.o
 
 %.efi: %.so
