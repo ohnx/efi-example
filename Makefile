@@ -31,7 +31,7 @@
 LANG="C"
 
 
-EXAMPLES=example.efi gfx_example.efi disk_example.efi mouse_example.efi
+EXAMPLES=example.efi gfx_example.efi disk_example.efi mouse_example.efi touch_example.efi
 COMMON = glue/$(ARCH)/relocation_func.o glue/$(ARCH)/start_func.o
 
 %.efi: %.so
@@ -77,6 +77,8 @@ all: $(EXAMPLES)
 example.so: $(COMMON) example.o
 gfx_example.so: $(COMMON) gfx_example.o
 disk_example.so: $(COMMON) disk_example.o
+touch_example.so: $(COMMON) touch_example.o
+mouse_example.so: $(COMMON) mouse_example.o
 
 clean:
 	rm -f $(EXAMPLES) *.so $(COMMON) example.o gfx_example.o disk_example.o
