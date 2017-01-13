@@ -85,6 +85,6 @@ clean:
 
 run:
 	cp *.efi hd/
-	qemu-system-x86_64 -enable-kvm -L . -hda fat:hd -hdc hd.image
+	./qemu-system-x86_64 -bios OVMF.fd -hda fat:hd -L bios/
 
 go: all run
